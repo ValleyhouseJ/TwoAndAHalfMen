@@ -72,6 +72,7 @@ function calculateApparentTemperature() {
     } else if (temp <= 10 && windSpeed > 4.8) { // Use wind chill for cold, windy conditions
         return windChill;
     }
+    return temp; // Default return value
 }
 
 // Function to update HTML with forecast data
@@ -82,12 +83,33 @@ function updateHTMLWithForecastData() {
         // Assuming forecastData has properties like temperature.
         let temperature = forecastData.properties.timeseries[0].data.instant.details.air_temperature;
         let apparentTemperature = calculateApparentTemperature();
-
+        let windSpeed = forecastData.properties.timeseries[0].data.instant.details.wind_speed;
+        let precipitation = forecastData.properties.timeseries[0].data.next_1_hours.details.precipitation_amount;
+        let uvIndex = forecastData.properties.timeseries[0].data.instant.details.ultraviolet_index_clear_sky;
+        let weatherSymbol = forecastData.properties.timeseries[0].data.next_1_hours.summary.symbol_code;
 
         // Update temperature
         document.getElementById("temperature").textContent = `${temperature}°C`;
-        document.getElementById("apparent-temperature").textContent = `${apparentTemperature}°C`;
+        document.getElementById("apparent-temperature").textContent = `Føles som ${apparentTemperature}°C`;
+
+        // Update additional information
+        document.getElementById("wind-speed").textContent = `${windSpeed} m/s`;
+        document.getElementById("precipitation").textContent = `${precipitation} mm`;
+        document.getElementById("uv-index").textContent = `${uvIndex} UV`;
+
+        // Update weather icon
+        const weatherIconElement = document.getElementById("weatherIcon");
+        weatherIconElement.src = `./svg/${weatherSymbol}.svg`;
+        weatherIconElement.alt = `Ikon for ${weatherSymbol}`;
     }
+}
+
+// Function to update the current time
+function updateCurrentTime() {
+    const currentTimeElement = document.getElementById('currentTime');
+    const now = new Date();
+    currentTimeElement.textContent = now.toLocaleTimeString();
+    currentTimeElement.setAttribute('datetime', now.toISOString());
 }
 
 // Listen for changes in local storage
@@ -100,6 +122,13 @@ window.addEventListener('storage', (event) => {
 // Ensure the DOM is fully loaded before calling the function
 document.addEventListener('DOMContentLoaded', (event) => {
     updateHTMLWithForecastData();
+    updateCurrentTime();
+    setInterval(updateCurrentTime, 1000); // Update time every second
+
+    // Add event listener to refresh icon
+    document.getElementById('refreshIcon').addEventListener('click', () => {
+        getForecastData();
+    });
 });
 
 // Call the main function
