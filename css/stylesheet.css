@@ -1,0 +1,219 @@
+/*
+body {
+	background-color: #f7f7f7;
+	margin: 30px 0 60px 0;
+}
+
+header {
+	background-color: #ffffff;
+	height: 70px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	padding: 0 20px 0 5px;
+}
+#header-logo {
+	padding: 10px;
+}
+
+.location-icon {
+	padding: 10px;
+}
+
+#overview-weather {
+	background-color: #ffffff;
+	margin: 8px;
+	height: 100px;
+	padding: 17px 44px 54px 33px;
+}
+
+#row-2 {
+	width: 100%;
+	height: 100%;
+}
+
+#col-1,
+#col-2,
+#col-3 {
+	width: 33.3333333333%;
+	background-color: yellowgreen;
+}
+*/
+:root {
+	--gray-medium: #787878;
+	--gray-dark: #484848;
+	--white: #ffffff;
+	--gray-light: #dddddd;
+	--black-transparent-light: #0000000d;
+	--black-transparent-none: #00000000;
+	--gray-very-light: #d9d9d9;
+	--gray-offwhite: #f1f1f1;
+	--gray-almost-white: #f7f7f7;
+}
+
+* {
+	margin: 0;
+	box-sizing: border-box;
+	/* background-color: var(--gray-almost-white); */
+}
+main {
+	background-color: var(--gray-almost-white);
+}
+/* ====================================
+     Header top
+     første sektion på forsiden.
+     ==================================== */
+
+.header-top {
+	width: 100%;
+	height: auto; /* Gør højden automatisk */
+	position: relative;
+}
+
+.header-bar {
+	width: 100%; /* Sætter bredden til 100% */
+	height: 70px;
+	background: var(--white);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.header-icon {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: 10px;
+	left: 15px;
+	background: var(--gray-very-light);
+	border-radius: 50%;
+}
+
+.header-settings {
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	top: 23px;
+	right: 15px; /* Flytter indstillingerne til højre */
+}
+
+.settings-background {
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.settings-icon {
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 2.08px;
+	left: 2.08px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/* background: var(--gray-medium); */
+}
+
+.settings-icon img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+/* hero */
+
+/* ====================================
+     Hero section
+     Her er anden section på forside.
+     ==================================== */
+
+.weather-container {
+	width: 100%;
+	height: auto; /* Gør højden automatisk */
+	position: relative;
+	padding: 10px 0; /* Tilføjer padding til weather container */
+}
+
+.weather-card {
+	width: 375px;
+	height: 190px;
+	background: var(--white);
+	border: 2px solid var(--gray-medium);
+	margin: 10px auto; /* Centerer kortet */
+	position: relative;
+	padding: 10px; /* Tilføjer padding inden i kortet */
+}
+
+.weather-icon {
+	width: 96px;
+	height: 76px;
+	/* background: var(--gray-medium); */
+	position: absolute;
+	top: 60px;
+	left: 141px;
+}
+
+.temperature-hero {
+	position: absolute;
+	top: 76px;
+	left: 32px;
+	color: var(--gray-dark);
+	font-size: 40px;
+	font-family: 'Inter', sans-serif;
+	font-weight: 500;
+}
+
+.location {
+	position: absolute;
+	top: 17px;
+	left: 152px;
+	color: var(--gray-dark);
+	font-size: 16px;
+	font-family: 'Inter', sans-serif;
+	font-weight: 500;
+}
+
+.feels-like,
+.wind-speed,
+.precipitation,
+.uv-index,
+.high-temp {
+	position: absolute;
+	color: var(--gray-dark);
+	font-size: 10px;
+	font-family: 'Inter', sans-serif;
+	font-weight: 500;
+}
+
+.feels-like {
+	top: 124px;
+	left: 32px;
+}
+
+.wind-speed {
+	top: 73px;
+	left: 295px;
+}
+
+.precipitation {
+	top: 90px;
+	left: 295px;
+}
+
+.uv-index {
+	top: 107px;
+	left: 295px;
+}
+
+.high-temp {
+	top: 124px;
+	left: 295px;
+}
