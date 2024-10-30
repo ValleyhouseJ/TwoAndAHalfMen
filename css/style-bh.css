@@ -1,11 +1,23 @@
+/* Anvend Inter som standard font */
+* {
+	font-family: 'Inter', sans-serif;
+}
+
 body {
 	background-color: #f7f7f7;
-	margin: 30px 0 60px 0;
+	margin: 0;
 }
 
 p,
-h2 {
+h1,
+h2,
+h3 {
 	margin: 0;
+}
+
+h1,
+h2 {
+	font-weight: 400;
 }
 
 header {
@@ -14,6 +26,10 @@ header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+	position: fixed;
+	width: 100%;
+	z-index: 99;
 }
 
 nav {
@@ -31,19 +47,19 @@ nav {
 	padding: 10px;
 }
 
+main {
+	padding: 30px 0 60px 0;
+}
+
 #overview-weather {
 	background-color: #ffffff;
-	margin: 8px;
-	padding: 17px 44px 54px 33px;
+	margin: 30px 8px 8px 8px;
+	padding: 35px 44px 54px 33px;
 }
 #row-1 {
 	display: flex;
 	align-items: center;
 	width: 100%;
-}
-
-#time {
-	position: absolute;
 }
 
 #location-title {
@@ -56,19 +72,35 @@ nav {
 	width: 100%;
 	height: 104px;
 	display: flex;
+	align-items: end;
 }
 
 #col-1,
 #col-2,
 #col-3 {
 	width: 33.3333333333%;
-	background-color: rgb(255, 177, 177);
-	height: 100%;
+	display: flex;
+	align-items: center;
 }
 
 #col-1 {
-	display: flex;
-	align-items: center;
+	position: relative;
+	bottom: -1px;
+}
+
+#col-2 {
+	justify-content: center;
+}
+#col-3 {
+	justify-content: end;
+	position: relative;
+	bottom: -2px;
+}
+
+#time {
+	position: absolute;
+	font-size: 10px;
+	margin-top: 5px;
 }
 
 .temperature {
@@ -79,14 +111,184 @@ nav {
 	margin: 0;
 }
 
-/***************************************************************************/
+.temperature-feels-like,
+.amount-of-rainfall-mm,
+.uv-index,
+.local-ocean-temp {
+	font-size: 10px;
+}
+
+.temperature-feels-like {
+	font-size: 10px;
+}
+
+.local-parametor-container {
+	line-height: 1.5;
+}
+
+#col-3 .wind-speed {
+	padding-left: 3px;
+}
+
+.amount-of-rainfall-mm::before {
+	content: url('../upload/svg/umbrella-icon.svg');
+	padding: 0 3px;
+}
+
+.uv-index::before {
+	content: url('../upload/svg/sun-icon.svg');
+	padding: 3px;
+}
+
+.local-ocean-temp::before {
+	content: url('../upload/svg/ocean-icon.svg');
+	padding: 3px;
+}
+
+#clothing-recommendations-section {
+	background-color: #fff;
+	height: 100px;
+	margin: 0 0 8px 0;
+	padding: 5px 16px 21px;
+}
+
+.we-recommend-title {
+	text-align: center;
+	font-size: 10px;
+	font-weight: 500;
+}
+
+#advertisement-section {
+	background-color: #fff;
+	height: 257px;
+	margin: 0 8px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 8px;
+	font-weight: 400;
+	color: #787878;
+}
 
 #overview-next-following-days {
 	background-color: #ffffff;
-	margin: 8px;
-	padding: 28px 8px 15px 8px;
+	margin: 8px 8px 0 8px;
+	padding: 28px 8px 1px 8px;
+}
+#row-3 {
+	margin-bottom: 14px;
+	text-align: center;
 }
 
-#row-3 h2 {
+.weather-table thead {
+	margin-bottom: 8px;
+}
+
+.weather-table {
+	width: 100%;
+	border-collapse: collapse;
+	/*border-spacing: 0;*/
+}
+
+.weather-table tbody tr {
+	border-top: 2px solid #787878;
+}
+.weather-table tbody tr:nth-child(1) td {
+	border-top: 2px solid rgba(0, 0, 0, 0);
+}
+
+.day-title,
+.morning-title,
+.early-evening-title,
+.late-evening-title,
+.afternoon-title {
+	font-size: 10px;
+	font-weight: 500;
+}
+
+.day-timespan-title,
+.morning-timespan-title,
+.early-evening-timespan-title,
+.late-evening-timespan-title,
+.afternoon-timespan-title {
+	font-size: 8px;
+	font-weight: 300;
+}
+
+.day-title,
+.day-timespan-title {
+	text-align: left;
+}
+
+.day-title,
+.day-timespan-title,
+.day-info {
+	padding: 8px 8px 5px 16px;
+}
+
+.day-info {
+	width: 0;
+}
+
+.day-info .day {
+	font-size: 12px;
+	font-weight: 600;
+	color: #484848;
+}
+.day-info .temp,
+.wind-speed,
+.wind-direction {
+	font-size: 10px;
+}
+
+.wind-speed::before {
+	content: url('../upload/svg/wind-icon.svg');
+	padding-right: 3px;
+}
+
+.weather-icon {
 	text-align: center;
+}
+
+.afternoon-title,
+.afternoon-timespan-title,
+.weather-icon-afternoon {
+	text-align: right;
+	padding-right: 10px;
+}
+
+.weather-table tbody tr:nth-child(even) td {
+	background-color: #dddddd;
+}
+.weather-table tbody tr:nth-child(odd) td {
+	background-color: #f1f1f1;
+}
+
+#row-4 {
+	text-align: center;
+	margin: 9px 0 15px 0;
+	line-height: 1.5;
+}
+
+.forcarst-update-disclaimer {
+	font-size: 10px;
+}
+
+.forcarst-src-disclaimer {
+	font-size: 8px;
+	color: #a9a9a9;
+}
+
+footer {
+	background-color: #c5c5c5;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 40px 0;
+	font-size: 10px;
+	line-height: 3;
+}
+footer a {
+	color: #787878;
 }

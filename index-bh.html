@@ -3,13 +3,16 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
 		<link rel="stylesheet" href="css/style-bh.css" />
 		<title>Vejr APP</title>
 	</head>
 	<body>
 		<header>
 			<nav>
-				<img id="header-logo" src="upload/svg/Logo.svg" alt="logo" />
+				<img id="header-logo" src="upload/svg/logo.svg" alt="logo" />
 				<div class="icon-container">
 					<img class="location-icon" src="upload/svg/location.svg" alt="opdater din lokation" />
 				</div>
@@ -32,9 +35,29 @@
 							<p class="temperature-feels-like">Føles som 8°</p>
 						</div>
 					</div>
-					<div id="col-2"></div>
-					<div id="col-3"></div>
+					<div id="col-2">
+						<img src="upload/svg/cloude-and-sunny-icon.svg" alt="Skyet og lidt sol ikon." />
+					</div>
+					<div id="col-3">
+						<div class="local-parametor-container">
+							<p class="wind-speed">4 m/s</p>
+							<p class="amount-of-rainfall-mm">0,2 mm</p>
+							<p class="uv-index">0,1 UV</p>
+							<p class="local-ocean-temp">13°</p>
+						</div>
+					</div>
 				</div>
+			</section>
+
+			<section id="clothing-recommendations-section">
+				<div id="row-5">
+					<h3 class="we-recommend-title">Vi andbefaler</h3>
+				</div>
+			</section>
+
+			<section id="advertisement-section">
+				<h3>Annoce</h3>
+				<img src="upload/webp/annonce-placeholder.webp" alt="Annonce placeholder billede." />
 			</section>
 
 			<section id="overview-next-following-days">
@@ -42,25 +65,182 @@
 					<h2>Kommende dage</h2>
 				</div>
 				<div class="table-container-next-following-days">
-					<table style="width: 100%">
-						<tr>
-							<td>Dag</td>
-							<td>Morgen</td>
-							<td>Formiddag</td>
-							<td>Eftermiddag</td>
-							<td>Aften</td>
-						</tr>
-						<tr>
-							<td></td>
-							<td>5 - 10</td>
-							<td>10 - 12</td>
-							<td>12 - 18</td>
-							<td>18 - 22</td>
-						</tr>
+					<table class="weather-table">
+						<thead>
+							<tr>
+								<th class="day-title">Dag</th>
+								<th class="morning-title">Morgen</th>
+								<th class="early-evening-title">Formiddag</th>
+								<th class="late-evening-title">Eftermiddag</th>
+								<th class="afternoon-title">Aften</th>
+							</tr>
+							<tr>
+								<th class="day-timespan-title">&nbsp</th>
+								<th class="morning-timespan-title">5 - 10</th>
+								<th class="early-evening-timespan-title">10 - 12</th>
+								<th class="late-evening-timespan-title">12 - 18</th>
+								<th class="afternoon-timespan-title">18 - 22</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="day-info">
+									<p class="day">Torsdag</p>
+									<p class="temp">9°</p>
+									<p class="wind-speed">4 m/s</p>
+									<img src="upload/svg/wind-direction-icon.svg" alt="Vind retning ikon" />
+								</td>
+								<td class="weather-icon">
+									<img src="upload/svg/vector.svg" alt="" />
+								</td>
+								<td class="weather-icon">
+									<img src="upload/svg/vector.svg" alt="" />
+								</td>
+								<td class="weather-icon">
+									<img src="upload/svg/vector.svg" alt="" />
+								</td>
+								<td class="weather-icon weather-icon-afternoon">
+									<img src="upload/svg/vector.svg" alt="" />
+								</td>
+							</tr>
+							<!-- Gentag denne række for hver dag -->
+							<tr>
+								<td class="day-info">
+									<p class="day">Fredag</p>
+									<p class="temp">9°</p>
+									<p class="wind-speed">4 m/s</p>
+									<img src="upload/svg/wind-direction-icon.svg" alt="Vind retning ikon" />
+								</td>
+								<td class="weather-icon">
+									<img src="upload/svg/vector.svg" alt="" />
+								</td>
+								<td class="weather-icon">
+									<img src="upload/svg/vector.svg" alt="" />
+								</td>
+								<td class="weather-icon">
+									<img src="upload/svg/vector.svg" alt="" />
+								</td>
+								<td class="weather-icon weather-icon-afternoon">
+									<img src="upload/svg/vector.svg" alt="" />
+								</td>
+							</tr>
+							<!-- Gentag denne række for hver dag -->
+							<tr>
+								<td class="day-info">
+									<p class="day">Lørdag</p>
+									<p class="temp">9°</p>
+									<p class="wind-speed">4 m/s</p>
+									<img src="upload/svg/wind-direction-icon.svg" alt="Vind retning ikon" />
+								</td>
+								<td class="weather-icon">
+									<img src="upload/svg/vector.svg" alt="" />
+								</td>
+								<td class="weather-icon">
+									<img src="upload/svg/vector.svg" alt="" />
+								</td>
+								<td class="weather-icon">
+									<img src="upload/svg/vector.svg" alt="" />
+								</td>
+								<td class="weather-icon weather-icon-afternoon">
+									<img src="upload/svg/vector.svg" alt="" />
+								</td>
+							</tr>
+							<!-- Gentag denne række for hver dag -->
+							<tr>
+								<td class="day-info">
+									<p class="day">Søndag</p>
+									<p class="temp">9°</p>
+									<p class="wind-speed">4 m/s</p>
+									<img src="upload/svg/wind-direction-icon.svg" alt="Vind retning ikon" />
+								</td>
+								<td class="weather-icon">
+									<img src="upload/svg/vector.svg" alt="" />
+								</td>
+								<td class="weather-icon">
+									<img src="upload/svg/vector.svg" alt="" />
+								</td>
+								<td class="weather-icon">
+									<img src="upload/svg/vector.svg" alt="" />
+								</td>
+								<td class="weather-icon weather-icon-afternoon">
+									<img src="upload/svg/vector.svg" alt="" />
+								</td>
+							</tr>
+							<!-- Gentag denne række for hver dag -->
+							<tr>
+								<td class="day-info">
+									<p class="day">Mandag</p>
+									<p class="temp">9°</p>
+									<p class="wind-speed">4 m/s</p>
+									<img src="upload/svg/wind-direction-icon.svg" alt="Vind retning ikon" />
+								</td>
+								<td class="weather-icon">
+									<img src="upload/svg/vector.svg" alt="" />
+								</td>
+								<td class="weather-icon">
+									<img src="upload/svg/vector.svg" alt="" />
+								</td>
+								<td class="weather-icon">
+									<img src="upload/svg/vector.svg" alt="" />
+								</td>
+								<td class="weather-icon weather-icon-afternoon">
+									<img src="upload/svg/vector.svg" alt="" />
+								</td>
+							</tr>
+							<!-- Gentag denne række for hver dag -->
+							<tr>
+								<td class="day-info">
+									<p class="day">Tirsdag</p>
+									<p class="temp">9°</p>
+									<p class="wind-speed">4 m/s</p>
+									<img src="upload/svg/wind-direction-icon.svg" alt="Vind retning ikon" />
+								</td>
+								<td class="weather-icon">
+									<img src="upload/svg/vector.svg" alt="" />
+								</td>
+								<td class="weather-icon">
+									<img src="upload/svg/vector.svg" alt="" />
+								</td>
+								<td class="weather-icon">
+									<img src="upload/svg/vector.svg" alt="" />
+								</td>
+								<td class="weather-icon weather-icon-afternoon">
+									<img src="upload/svg/vector.svg" alt="" />
+								</td>
+							</tr>
+							<!-- Gentag denne række for hver dag -->
+							<tr>
+								<td class="day-info">
+									<p class="day">Onsdag</p>
+									<p class="temp">9°</p>
+									<p class="wind-speed">4 m/s</p>
+									<img src="upload/svg/wind-direction-icon.svg" alt="Vind retning ikon" />
+								</td>
+								<td class="weather-icon">
+									<img src="upload/svg/vector.svg" alt="" />
+								</td>
+								<td class="weather-icon">
+									<img src="upload/svg/vector.svg" alt="" />
+								</td>
+								<td class="weather-icon">
+									<img src="upload/svg/vector.svg" alt="" />
+								</td>
+								<td class="weather-icon weather-icon-afternoon">
+									<img src="upload/svg/vector.svg" alt="" />
+								</td>
+							</tr>
+						</tbody>
 					</table>
+				</div>
+				<div id="row-4">
+					<p class="forcarst-update-disclaimer">Prognoserne opdateres hver 6. time</p>
+					<p class="forcarst-src-disclaimer">Kilde: MET Nordway</p>
 				</div>
 			</section>
 		</main>
-		<footer></footer>
+		<footer>
+			<a href="#"><p>CVR: 2935835</p></a>
+			<a href="#"><p>«Based on data from MET Norway»</p></a>
+		</footer>
 	</body>
 </html>
