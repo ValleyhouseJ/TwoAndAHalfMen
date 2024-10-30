@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="css/stylesheet.css" />
+		<link rel="stylesheet" href="css/style-bh.css" />
 		<title>Vejr APP</title>
 	</head>
 	<body>
@@ -18,13 +18,46 @@
 		<main>
 			<section id="overview-weather">
 				<div id="row-1">
-					<div id="time"></div>
-					<div></div>
+					<div id="time">
+						<p>10:23</p>
+					</div>
+					<div id="location-title">
+						<h1>Kolding</h1>
+					</div>
 				</div>
 				<div id="row-2">
-					<div id="col 1"></div>
-					<div id="col 2"></div>
-					<div id="col 3"></div>
+					<div id="col-1">
+						<div>
+							<p class="temperature">10°</p>
+							<p class="temperature-feels-like">Føles som 8°</p>
+						</div>
+					</div>
+					<div id="col-2"></div>
+					<div id="col-3"></div>
+				</div>
+			</section>
+
+			<section id="overview-next-following-days">
+				<div id="row-3">
+					<h2>Kommende dage</h2>
+				</div>
+				<div class="table-container-next-following-days">
+					<table style="width: 100%">
+						<tr>
+							<td>Dag</td>
+							<td>Morgen</td>
+							<td>Formiddag</td>
+							<td>Eftermiddag</td>
+							<td>Aften</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>5 - 10</td>
+							<td>10 - 12</td>
+							<td>12 - 18</td>
+							<td>18 - 22</td>
+						</tr>
+					</table>
 				</div>
 			</section>
 		</main>
