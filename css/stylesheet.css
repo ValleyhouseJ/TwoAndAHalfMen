@@ -46,7 +46,7 @@ main {
 	border-radius: 50%;
 }
 
-.header-settings {
+#header-settings {
 	width: 25px;
 	height: 25px;
 	position: absolute;
@@ -104,7 +104,7 @@ main {
 	padding: 10px; /* Tilføjer padding inden i kortet */
 }
 
-.weather-icon {
+#weather-icon {
 	width: 96px;
 	height: 76px;
 	/* background: var(--gray-medium); */
@@ -134,7 +134,7 @@ main {
 }
 
 #feels-like,
-.wind-speed,
+#wind-speed,
 .precipitation,
 .uv-index,
 .high-temp {
@@ -150,7 +150,7 @@ main {
 	left: 32px;
 }
 
-.wind-speed {
+#wind-speed {
 	top: 73px;
 	left: 295px;
 }
@@ -372,7 +372,7 @@ th {
 	text-align: center; /* Centrerer teksten */
 }
 
-.date {
+#date {
 	text-align: center; /* Centrerer teksten */
 	margin: 10px 0; /* Giver lidt plads over og under */
 	font-size: 16px; /* Valgfrit: Juster størrelsen på teksten */
