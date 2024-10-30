@@ -161,7 +161,7 @@ main {
 	left: 141px;
 }
 
-.temperature-hero {
+#temperature-hero {
 	position: absolute;
 	top: 76px;
 	left: 32px;
@@ -181,7 +181,7 @@ main {
 	font-weight: 500;
 }
 
-.feels-like,
+#feels-like,
 .wind-speed,
 .precipitation,
 .uv-index,
@@ -193,7 +193,7 @@ main {
 	font-weight: 500;
 }
 
-.feels-like {
+#feels-like {
 	top: 124px;
 	left: 32px;
 }

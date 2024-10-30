@@ -89,8 +89,8 @@ function updateHTMLWithForecastData() {
         let weatherSymbol = forecastData.properties.timeseries[0].data.next_1_hours.summary.symbol_code;
 
         // Update temperature
-        document.getElementById("temperature").textContent = `${temperature}°C`;
-        document.getElementById("apparent-temperature").textContent = `Føles som ${apparentTemperature}°C`;
+        document.getElementById("temperature-hero").textContent = `${temperature}°`;
+        document.getElementById("feels-like").textContent = `Føles som ${apparentTemperature}°`;
 
         // Update additional information
         document.getElementById("wind-speed").textContent = `${windSpeed} m/s`;
@@ -106,7 +106,7 @@ function updateHTMLWithForecastData() {
 
 // Function to update the current time
 function updateCurrentTime() {
-    const currentTimeElement = document.getElementById('currentTime');
+    const currentTimeElement = document.getElementById('time');
     const now = new Date();
     currentTimeElement.textContent = now.toLocaleTimeString();
     currentTimeElement.setAttribute('datetime', now.toISOString());
@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     setInterval(updateCurrentTime, 1000); // Update time every second
 
     // Add event listener to refresh icon
-    document.getElementById('refreshIcon').addEventListener('click', () => {
+    document.getElementById('header-settings').addEventListener('click', () => {
         getForecastData();
     });
 });
