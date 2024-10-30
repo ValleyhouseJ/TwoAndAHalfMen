@@ -1,51 +1,3 @@
-/*
-body {
-	background-color: #f7f7f7;
-	margin: 30px 0 60px 0;
-}
-
-header {
-	background-color: #ffffff;
-	height: 70px;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-}
-
-nav {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	width: 100%;
-	padding: 0 20px 0 5px;
-}
-#header-logo {
-	padding: 10px;
-}
-
-.location-icon {
-	padding: 10px;
-}
-
-#overview-weather {
-	background-color: #ffffff;
-	margin: 8px;
-	height: 100px;
-	padding: 17px 44px 54px 33px;
-}
-
-#row-2 {
-	width: 100%;
-	height: 100%;
-}
-
-#col-1,
-#col-2,
-#col-3 {
-	width: 33.3333333333%;
-	background-color: yellowgreen;
-}
-*/
 :root {
 	--gray-medium: #787878;
 	--gray-dark: #484848;
@@ -217,3 +169,237 @@ main {
 	top: 124px;
 	left: 295px;
 }
+
+/* ====================================
+   Tøj anbefaldinger
+   tredje section på forsiden.
+   ==================================== */
+
+/* Recommendations Section */
+.recommendations-container {
+	width: 100%;
+	height: auto; /* Gør højden automatisk */
+	position: relative;
+	/* display: flex; */
+	padding: 10px 0; /* Tilføjer lidt padding til containeren */
+}
+
+.recommendations-card {
+	width: 390px;
+	height: 120px;
+	background: var(--white);
+	border: 2px solid;
+	display: flex;
+	flex-direction: column; /* Sørg for, at elementerne stables lodret */
+	padding: 10px; /* Tilføj lidt padding inde i kortet */
+	margin: 0 auto; /* Centerer kortet */
+	align-items: center;
+}
+
+.recommendations-title {
+	color: var(--gray-dark);
+	font-size: 10px;
+	font-family: 'Inter', sans-serif;
+	font-weight: 500;
+	margin-bottom: 5px; /* Tilføj margin mellem titel og anbefalinger */
+}
+
+.test {
+	display: flex;
+	flex-direction: row;
+}
+
+.recommendation-item {
+	color: var(--gray-medium);
+	font-size: 8px;
+	display: flex;
+	flex-direction: column; /* Sørg for, at elementerne stables lodret */
+	padding: 10px; /* Tilføj lidt padding inde i kortet */
+	margin: 0 auto; /* Centerer kortet */
+	align-items: center;
+	font-family: 'Inter', sans-serif;
+	font-weight: 500;
+	margin: 2px; /* Tilføj margin mellem anbefalingerne */
+}
+
+.recommendation-icon {
+	width: 48px;
+	height: 48px;
+	margin: 5px 0; /* Tilføj margin mellem ikonerne og teksten */
+}
+
+/* Specifik styling for individuelle ikoner */
+.icon-pants {
+	margin-bottom: 5px; /* Tilføj margin til ikonet */
+}
+
+.icon-tshirt {
+	margin-bottom: 5px; /* Tilføj margin til ikonet */
+}
+
+.icon-raincoat {
+	margin-bottom: 5px; /* Tilføj margin til ikonet */
+}
+
+/* Ikoner som pseudoelementer
+  .icon-pants::before {
+	content: "";
+	width: 23.78px;
+	height: 43.42px;
+	background: var(--gray-medium);
+	position: absolute;
+	left: 12.11px;
+	top: 2.3px;
+  }
+  
+  .icon-tshirt::before {
+	content: "";
+	width: 40.28px;
+	height: 45.1px;
+	background: var(--gray-medium);
+	position: absolute;
+	left: 3.9px;
+	top: 1.47px;
+  }
+  
+  .icon-tshirt::after {
+	content: "";
+	width: 9.66px;
+	height: 1.47px;
+	background: var(--gray-medium);
+	position: absolute;
+	left: 19.24px;
+	top: 6.02px;
+  }
+  
+  .icon-raincoat::before {
+	content: "";
+	width: 41.39px;
+	height: 33.55px;
+	background: var(--gray-medium);
+	position: absolute;
+	left: 3.3px;
+	top: 7.23px;
+  } */
+
+/* =======================================
+   *          🟠 time sectiom 🟠
+   *    ➔ her er den fjerde section
+   * ======================================= */
+
+.time-container {
+	/* color: var(--gray-dark); */
+	font-size: 10px;
+	font-family: 'Inter', sans-serif;
+	font-weight: 500;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	background: white;
+	/* border: 2px solid; */
+	padding: 20px 8px; /* Tilføjet lidt padding */
+}
+
+table {
+	width: 100%; /* Sørger for at tabellen fylder hele containeren */
+	border-collapse: collapse; /* Fjerner mellemrum mellem cellerne */
+}
+
+tr {
+	text-align: center;
+	border-bottom: 1px solid #787878; /* Grå linje i bunden af hver række */
+}
+
+td {
+	padding: 5px; /* Giver lidt plads omkring teksten */
+}
+
+th {
+	text-align: center;
+	padding: 5px; /* Giver lidt plads omkring overskrifterne */
+	background-color: var(--white); /* Valgfrit: Giver en baggrundsfarve til overskrifter */
+	/* text-align: left; Venstrejusterer tekst i overskrifter */
+}
+
+.line {
+	width: 100%;
+	background: #787878;
+}
+
+.line-thick {
+	height: 40px;
+}
+
+.dark-line {
+	background: #484848;
+}
+
+.box {
+	width: 100%;
+	position: absolute;
+	background: #dddddd;
+}
+
+.gray-box {
+	background: #dddddd;
+}
+
+.light-gray-box {
+	background: #f1f1f1;
+}
+
+.border-box {
+	width: 100%;
+	height: auto; /* Justeret til auto for at tilpasse indholdet */
+}
+
+.temperature,
+.number,
+.header,
+.time-box,
+.expand,
+.announce {
+	color: #484848;
+	font-size: 10px;
+	font-family: 'Inter', sans-serif;
+	font-weight: 500;
+}
+.weather {
+	font-size: 10px;
+	color: #484848;
+	font-family: 'Inter', sans-serif;
+	font-weight: 500;
+	text-align: center; /* Centrerer teksten */
+}
+
+.date {
+	text-align: center; /* Centrerer teksten */
+	margin: 10px 0; /* Giver lidt plads over og under */
+	font-size: 16px; /* Valgfrit: Juster størrelsen på teksten */
+	font-weight: bold; /* Valgfrit: Gør teksten fed */
+}
+
+.expand {
+	color: white;
+	font-size: 6px;
+}
+
+.dot {
+	width: 11px;
+	height: 11px;
+	/* background: #787878; */
+}
+
+.line-light {
+	background: #f1f1f1; /* Lys farve */
+}
+
+.line-dark {
+	background: #dddddd; /* Mørkere farve */
+}
+
+/* .gradient-box {
+	width: 100%;
+	height: 66px;
+	background: linear-gradient(180deg, rgba(217, 217, 217, 0) 0%, white 100%);
+  } */
