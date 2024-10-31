@@ -39,6 +39,7 @@ nav {
 	width: 100%;
 	padding: 0 20px 0 5px;
 }
+
 #header-logo {
 	padding: 10px;
 }
@@ -56,6 +57,7 @@ main {
 	margin: 30px 8px 8px 8px;
 	padding: 35px 44px 54px 33px;
 }
+
 #row-1 {
 	display: flex;
 	align-items: center;
@@ -91,6 +93,7 @@ main {
 #col-2 {
 	justify-content: center;
 }
+
 #col-3 {
 	justify-content: end;
 	position: relative;
@@ -161,7 +164,8 @@ main {
 #advertisement-section {
 	background-color: #fff;
 	height: 257px;
-	margin: 0 8px;
+	margin: 8px 8px 0 8px;
+	padding-top: 16px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -175,6 +179,7 @@ main {
 	margin: 8px 8px 0 8px;
 	padding: 28px 8px 1px 8px;
 }
+
 #row-3 {
 	margin-bottom: 14px;
 	text-align: center;
@@ -193,6 +198,7 @@ main {
 .weather-table tbody tr {
 	border-top: 2px solid #787878;
 }
+
 .weather-table tbody tr:nth-child(1) td {
 	border-top: 2px solid rgba(0, 0, 0, 0);
 }
@@ -235,6 +241,7 @@ main {
 	font-weight: 600;
 	color: #484848;
 }
+
 .day-info .temp,
 .wind-speed,
 .wind-direction {
@@ -260,6 +267,7 @@ main {
 .weather-table tbody tr:nth-child(even) td {
 	background-color: #dddddd;
 }
+
 .weather-table tbody tr:nth-child(odd) td {
 	background-color: #f1f1f1;
 }
@@ -289,6 +297,134 @@ footer {
 	font-size: 10px;
 	line-height: 3;
 }
+
 footer a {
 	color: #787878;
+}
+
+/* =======================================
+   *          🟠 time sectiom 🟠
+   *    ➔ her er den fjerde section
+   * ======================================= */
+
+.time-container {
+	/* color: var(--gray-dark); */
+	font-size: 10px;
+	font-family: 'Inter', sans-serif;
+	font-weight: 500;
+	position: relative;
+	background: white;
+	margin: 8px 8px 0 8px;
+	padding: 28px 8px 1px 8px;
+	/* Tilføjet lidt padding */
+}
+
+.time-container table {
+	width: 100%;
+	/* Sørger for at tabellen fylder hele containeren */
+	border-collapse: collapse;
+	/* Fjerner mellemrum mellem cellerne */
+}
+
+.time-container table tr {
+	text-align: center;
+	border-bottom: 1px solid #787878;
+	/* Grå linje i bunden af hver række */
+}
+
+.time-container table td {
+	padding: 5px;
+	/* Giver lidt plads omkring teksten */
+}
+
+.time-container table th {
+	text-align: center;
+	padding: 5px;
+	/* Giver lidt plads omkring overskrifterne */
+	background-color: var(--white);
+	/* Valgfrit: Giver en baggrundsfarve til overskrifter */
+	/* text-align: left; Venstrejusterer tekst i overskrifter */
+}
+
+.line {
+	width: 100%;
+	background: #787878;
+}
+
+.line-thick {
+	height: 40px;
+}
+
+.dark-line {
+	background: #484848;
+}
+
+.box {
+	width: 100%;
+	position: absolute;
+	background: #dddddd;
+}
+
+.gray-box {
+	background: #dddddd;
+}
+
+.light-gray-box {
+	background: #f1f1f1;
+}
+
+.border-box {
+	width: 100%;
+	height: auto;
+	/* Justeret til auto for at tilpasse indholdet */
+}
+
+.temperature-box,
+.number,
+.time-box {
+	color: #484848;
+	font-size: 10px;
+	font-family: 'Inter', sans-serif;
+	font-weight: 500;
+}
+
+.weather-box {
+	font-size: 10px;
+	color: #484848;
+	font-family: 'Inter', sans-serif;
+	font-weight: 500;
+	text-align: center;
+	/* Centrerer teksten */
+}
+
+#date {
+	text-align: center;
+	/* Centrerer teksten */
+	margin: 10px 0;
+	/* Giver lidt plads over og under */
+	font-size: 16px;
+	/* Valgfrit: Juster størrelsen på teksten */
+	font-weight: bold;
+	/* Valgfrit: Gør teksten fed */
+}
+
+.expand {
+	color: white;
+	font-size: 6px;
+}
+
+.dot {
+	width: 11px;
+	height: 11px;
+	/* background: #787878; */
+}
+
+.line-light {
+	background: #f1f1f1;
+	/* Lys farve */
+}
+
+.line-dark {
+	background: #dddddd;
+	/* Mørkere farve */
 }
