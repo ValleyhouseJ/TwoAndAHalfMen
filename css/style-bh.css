@@ -53,8 +53,19 @@ nav {
 	padding: 10px;
 }
 
+#secondary-header {
+	position: fixed;
+	bottom: 0;
+	z-index: 99;
+	box-shadow: 0px 0px 30px 30px rgba(0, 0, 0, 0.1);
+}
+
+#secondary-header nav {
+	padding: 0 20px;
+}
+
 main {
-	padding: 30px 0 0px 0;
+	padding: 30px 0 0 0;
 }
 
 #overview-weather {
@@ -300,7 +311,6 @@ td.weather-info-hours.weather-info-hourly-wind-speed {
 .weather-table {
 	width: 100%;
 	border-collapse: collapse;
-	/*border-spacing: 0;*/
 }
 
 .weather-table tbody tr {
@@ -401,138 +411,11 @@ footer {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding: 40px 0;
+	padding: 40px 0 110px 0;
 	font-size: 10px;
 	line-height: 3;
 }
 
 footer a {
 	color: #787878;
-}
-
-/* =======================================
-   *          🟠 time sectiom 🟠
-   *    ➔ her er den fjerde section
-   * ======================================= */
-
-.time-container {
-	/* color: var(--gray-dark); */
-	font-size: 10px;
-	font-family: 'Inter', sans-serif;
-	font-weight: 500;
-	position: relative;
-	background: white;
-	margin: 8px 8px 0 8px;
-	padding: 28px 8px 1px 8px;
-	/* Tilføjet lidt padding */
-}
-
-.time-container table {
-	width: 100%;
-	/* Sørger for at tabellen fylder hele containeren */
-	border-collapse: collapse;
-	/* Fjerner mellemrum mellem cellerne */
-}
-
-.time-container table tr {
-	text-align: center;
-	border-bottom: 1px solid #787878;
-	/* Grå linje i bunden af hver række */
-}
-
-.time-container table td {
-	padding: 5px;
-	/* Giver lidt plads omkring teksten */
-}
-
-.time-container table th {
-	text-align: center;
-	padding: 5px;
-	/* Giver lidt plads omkring overskrifterne */
-	background-color: var(--white);
-	/* Valgfrit: Giver en baggrundsfarve til overskrifter */
-	/* text-align: left; Venstrejusterer tekst i overskrifter */
-}
-
-.line {
-	width: 100%;
-	background: #787878;
-}
-
-.line-thick {
-	height: 40px;
-}
-
-.dark-line {
-	background: #484848;
-}
-
-.box {
-	width: 100%;
-	position: absolute;
-	background: #dddddd;
-}
-
-.gray-box {
-	background: #dddddd;
-}
-
-.light-gray-box {
-	background: #f1f1f1;
-}
-
-.border-box {
-	width: 100%;
-	height: auto;
-	/* Justeret til auto for at tilpasse indholdet */
-}
-
-.temperature-box,
-.number,
-.time-box {
-	color: #484848;
-	font-size: 10px;
-	font-family: 'Inter', sans-serif;
-	font-weight: 500;
-}
-
-.weather-box {
-	font-size: 10px;
-	color: #484848;
-	font-family: 'Inter', sans-serif;
-	font-weight: 500;
-	text-align: center;
-	/* Centrerer teksten */
-}
-
-#date {
-	text-align: center;
-	/* Centrerer teksten */
-	margin: 10px 0;
-	/* Giver lidt plads over og under */
-	font-size: 16px;
-	/* Valgfrit: Juster størrelsen på teksten */
-	font-weight: bold;
-	/* Valgfrit: Gør teksten fed */
-}
-
-.expand {
-	color: white;
-	font-size: 6px;
-}
-
-.dot {
-	width: 11px;
-	height: 11px;
-	/* background: #787878; */
-}
-
-.line-light {
-	background: #f1f1f1;
-	/* Lys farve */
-}
-
-.line-dark {
-	background: #dddddd;
-	/* Mørkere farve */
 }
