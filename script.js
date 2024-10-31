@@ -40,6 +40,7 @@ async function fetchData() {
 }
 
 // Function to check if the cached data is still valid based on the expiration time
+// Expires is given in the HTTP header of the response
 function isDataValid() {
     let expires = localStorage.getItem("expires");
     if (expires) {
