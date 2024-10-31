@@ -15,9 +15,14 @@ h3 {
 	margin: 0;
 }
 
+p {
+	font-weight: 500;
+}
+
 h1,
 h2 {
-	font-weight: 400;
+	font-weight: 500;
+	font-size: 16px;
 }
 
 header {
@@ -48,8 +53,19 @@ nav {
 	padding: 10px;
 }
 
+#secondary-header {
+	position: fixed;
+	bottom: 0;
+	z-index: 99;
+	box-shadow: 0px 0px 30px 30px rgba(0, 0, 0, 0.1);
+}
+
+#secondary-header nav {
+	padding: 0 20px;
+}
+
 main {
-	padding: 30px 0 60px 0;
+	padding: 30px 0 0 0;
 }
 
 #overview-weather {
@@ -150,7 +166,6 @@ main {
 
 #clothing-recommendations-section {
 	background-color: #fff;
-	height: 100px;
 	margin: 0 0 8px 0;
 	padding: 5px 16px 21px;
 }
@@ -159,6 +174,31 @@ main {
 	text-align: center;
 	font-size: 10px;
 	font-weight: 500;
+}
+
+#clothing-wrapper {
+	display: flex;
+	justify-content: center;
+	margin: 14px 0 0 0;
+}
+
+#clothing-box {
+	margin: 0 5px;
+}
+
+#clothing-name {
+	font-size: 8px;
+	text-align: center;
+}
+
+#overview-todays-weather-section {
+	background-color: #ffffff;
+	margin: 8px 8px 0 8px;
+	padding: 28px 8px 1px 8px;
+}
+#row-6 {
+	margin-bottom: 14px;
+	text-align: center;
 }
 
 #advertisement-section {
@@ -173,8 +213,87 @@ main {
 	font-weight: 400;
 	color: #787878;
 }
+/*****************************************************/
+.time-title,
+.weather-title,
+.temp-title,
+.amount-of-rainfall-title,
+.wind-m-s-title {
+	font-size: 10px;
+	font-weight: 500;
+}
 
-#overview-next-following-days {
+.time-title {
+	text-align: left;
+	padding: 8px 8px 5px 16px;
+}
+
+.weather-title {
+	width: 24%;
+}
+
+.amount-of-rainfall-title {
+	width: 54%;
+}
+
+.wind-m-s-title {
+	text-align: right;
+	padding-right: 10px;
+	width: 20%;
+}
+
+.time-title,
+.todays-hours-info {
+	padding: 8px 8px 8px 16px;
+}
+
+.hours {
+	width: 0;
+	font-size: 10px;
+}
+
+.todays-hours .hours {
+	font-size: 12px;
+	font-weight: 600;
+	color: #484848;
+}
+
+.temp-title,
+.weather-info-hours .temp {
+	text-align: end;
+}
+
+.weather-info-hours {
+	text-align: center;
+	font-size: 10px;
+}
+
+.weather-info-hourly-wind-speed {
+	display: flex;
+	justify-content: end;
+	padding: 8px 10px 8px 0;
+	text-align: end;
+}
+
+.hourly-wind-speed {
+	padding: 0 5px;
+}
+
+.table-container-todays-weather .weather-table tbody tr:nth-child(1) td {
+	border-top: 2px solid #787878;
+}
+
+.table-container-todays-weather .weather-table tbody:last-child {
+	border-bottom: 2px solid #787878;
+}
+
+td.weather-info-hours.weather-info-hourly-wind-speed {
+	border: none !important;
+}
+
+/********************************************************/
+#overview-next-following-days,
+#overview-todays-weather-section {
 	background-color: #ffffff;
 	margin: 8px 8px 0 8px;
 	padding: 28px 8px 1px 8px;
@@ -192,7 +311,6 @@ main {
 .weather-table {
 	width: 100%;
 	border-collapse: collapse;
-	/*border-spacing: 0;*/
 }
 
 .weather-table tbody tr {
@@ -293,138 +411,11 @@ footer {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding: 40px 0;
+	padding: 40px 0 110px 0;
 	font-size: 10px;
 	line-height: 3;
 }
 
 footer a {
 	color: #787878;
-}
-
-/* =======================================
-   *          🟠 time sectiom 🟠
-   *    ➔ her er den fjerde section
-   * ======================================= */
-
-.time-container {
-	/* color: var(--gray-dark); */
-	font-size: 10px;
-	font-family: 'Inter', sans-serif;
-	font-weight: 500;
-	position: relative;
-	background: white;
-	margin: 8px 8px 0 8px;
-	padding: 28px 8px 1px 8px;
-	/* Tilføjet lidt padding */
-}
-
-.time-container table {
-	width: 100%;
-	/* Sørger for at tabellen fylder hele containeren */
-	border-collapse: collapse;
-	/* Fjerner mellemrum mellem cellerne */
-}
-
-.time-container table tr {
-	text-align: center;
-	border-bottom: 1px solid #787878;
-	/* Grå linje i bunden af hver række */
-}
-
-.time-container table td {
-	padding: 5px;
-	/* Giver lidt plads omkring teksten */
-}
-
-.time-container table th {
-	text-align: center;
-	padding: 5px;
-	/* Giver lidt plads omkring overskrifterne */
-	background-color: var(--white);
-	/* Valgfrit: Giver en baggrundsfarve til overskrifter */
-	/* text-align: left; Venstrejusterer tekst i overskrifter */
-}
-
-.line {
-	width: 100%;
-	background: #787878;
-}
-
-.line-thick {
-	height: 40px;
-}
-
-.dark-line {
-	background: #484848;
-}
-
-.box {
-	width: 100%;
-	position: absolute;
-	background: #dddddd;
-}
-
-.gray-box {
-	background: #dddddd;
-}
-
-.light-gray-box {
-	background: #f1f1f1;
-}
-
-.border-box {
-	width: 100%;
-	height: auto;
-	/* Justeret til auto for at tilpasse indholdet */
-}
-
-.temperature-box,
-.number,
-.time-box {
-	color: #484848;
-	font-size: 10px;
-	font-family: 'Inter', sans-serif;
-	font-weight: 500;
-}
-
-.weather-box {
-	font-size: 10px;
-	color: #484848;
-	font-family: 'Inter', sans-serif;
-	font-weight: 500;
-	text-align: center;
-	/* Centrerer teksten */
-}
-
-#date {
-	text-align: center;
-	/* Centrerer teksten */
-	margin: 10px 0;
-	/* Giver lidt plads over og under */
-	font-size: 16px;
-	/* Valgfrit: Juster størrelsen på teksten */
-	font-weight: bold;
-	/* Valgfrit: Gør teksten fed */
-}
-
-.expand {
-	color: white;
-	font-size: 6px;
-}
-
-.dot {
-	width: 11px;
-	height: 11px;
-	/* background: #787878; */
-}
-
-.line-light {
-	background: #f1f1f1;
-	/* Lys farve */
-}
-
-.line-dark {
-	background: #dddddd;
-	/* Mørkere farve */
 }
