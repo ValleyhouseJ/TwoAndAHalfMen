@@ -92,21 +92,41 @@ function updateHTMLWithForecastData() {
         let weatherSymbol = forecastData.properties.timeseries[0].data.next_1_hours.summary.symbol_code;
 
         // Update temperature
-        document.querySelector(".temperature").textContent = `${temperature}°`;
-        document.querySelector(".temperature-feels-like").textContent = `Føles som ${apparentTemperature}°`;
+        const temperatureElement = document.querySelector(".temperature");
+        if (temperatureElement) {
+            temperatureElement.textContent = `${temperature}°`;
+        }
+
+        const feelsLikeElement = document.querySelector(".temperature-feels-like");
+        if (feelsLikeElement) {
+            feelsLikeElement.textContent = `Føles som ${apparentTemperature}°`;
+        }
 
         // Update additional information
-        document.querySelector(".wind-speed").textContent = `${windSpeed} m/s`;
-        document.querySelector(".amount-of-rainfall-mm").textContent = `${precipitation} mm`;
-        document.querySelector(".uv-index").textContent = `${uvIndex} UV`;
+        const windSpeedElement = document.querySelector(".wind-speed");
+        if (windSpeedElement) {
+            windSpeedElement.textContent = `${windSpeed} m/s`;
+        }
+
+        const precipitationElement = document.querySelector(".amount-of-rainfall-mm");
+        if (precipitationElement) {
+            precipitationElement.textContent = `${precipitation} mm`;
+        }
+
+        const uvIndexElement = document.querySelector(".uv-index");
+        if (uvIndexElement) {
+            uvIndexElement.textContent = `${uvIndex} UV`;
+        }
 
         // Update weather icon
         const weatherIconImg = document.querySelector("#weather-icon-img");
-        weatherIconImg.src = `./svg/${weatherSymbol}.svg`;
-        weatherIconImg.alt = `Ikon for ${weatherSymbol}`;
+        if (weatherIconImg) {
+            weatherIconImg.src = `./svg/${weatherSymbol}.svg`;
+            weatherIconImg.alt = `Ikon for ${weatherSymbol}`;
+        }
 
         // Update time-container with forecast data for each time slot
-        const timeRows = document.querySelectorAll(".time-container tbody tr");
+        const timeRows = document.querySelectorAll(".weather-table tbody tr");
         forecastData.properties.timeseries.slice(0, timeRows.length).forEach((timeseries, index) => {
             const time = new Date(timeseries.time).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
             const temp = timeseries.data.instant.details.air_temperature;
@@ -115,12 +135,36 @@ function updateHTMLWithForecastData() {
             const symbol = timeseries.data.next_1_hours ? timeseries.data.next_1_hours.summary.symbol_code : "clearsky_day";
 
             const row = timeRows[index];
-            row.querySelector(".time-box").textContent = time;
-            row.querySelector(".time-icon-img").setAttribute("src", `./svg/${symbol}.svg`);
-            row.querySelector(".time-icon-img").setAttribute("alt", `Weather Icon for ${symbol}`);
-            row.querySelector(".temperature-box").textContent = `${temp}°`;
-            row.querySelector(".number").textContent = precip;
-            row.querySelector(".dot").textContent = wind;
+            if (row) {
+                const hoursElement = row.querySelector(".hours");
+                if (hoursElement) {
+                    hoursElement.textContent = time;
+                }
+
+                const weatherIconElement = row.querySelector(".weather-info-hours img");
+                if (weatherIconElement) {
+                    weatherIconElement.setAttribute("src", `./svg/${symbol}.svg`);
+                    weatherIconElement.setAttribute("alt", `Weather Icon for ${symbol}`);
+                    weatherIconElement.setAttribute("width", `20`);
+                }
+
+                const tempElement = row.querySelector(".temp");
+                if (tempElement) {
+                    tempElement.textContent = `${temp}°`;
+                }
+
+                const precipElement = row.querySelectorAll(".weather-info-hours")[2];
+                if (precipElement) {
+                    const precipP = document.createElement("p");
+                    precipP.textContent = `${precip} mm`;
+                    precipElement.appendChild(precipP);
+                }
+
+                const windSpeedElement = row.querySelector(".hourly-wind-speed");
+                if (windSpeedElement) {
+                    windSpeedElement.textContent = `${wind} m/s`;
+                }
+            }
         });
 
         // Get the current day index (0 for Sunday, 1 for Monday)
@@ -128,7 +172,6 @@ function updateHTMLWithForecastData() {
         const days = ["Søndag", "Mandag", "Tirsdag", "Onsdag", "Torsdag", "Fredag", "Lørdag"];
 
         // Generate the array of days starting from the current day using map function with modulus to wrap around the week
-        // _ is a placeholder for the value.
         const orderedDays = Array.from({ length: 7 }, (_, i) => days[(todayIndex + i) % 7]);
 
         // Update daily forecast data for the next 7 days in the overview table with forecast data for each time slot
@@ -144,15 +187,31 @@ function updateHTMLWithForecastData() {
 
             if (dayIndex < dailyRows.length) {
                 const row = dailyRows[dayIndex];
-                if (timeOfDayIndex === 0) {
-                    row.querySelector(".day").textContent = orderedDays[dayIndex];
-                    row.querySelector(".temp").textContent = `${temp}°`;
-                    row.querySelector(".wind-speed").textContent = `${windSpeed} m/s`;
+                if (row) {
+                    if (timeOfDayIndex === 0) {
+                        const dayElement = row.querySelector(".day");
+                        if (dayElement) {
+                            dayElement.textContent = orderedDays[dayIndex];
+                        }
+
+                        const tempElement = row.querySelector(".temp");
+                        if (tempElement) {
+                            tempElement.textContent = `${temp}°`;
+                        }
+
+                        const windSpeedElement = row.querySelector(".wind-speed");
+                        if (windSpeedElement) {
+                            windSpeedElement.textContent = `${windSpeed} m/s`;
+                        }
+                    }
+
+                    const weatherIcons = row.querySelectorAll(".weather-icon img");
+                    if (weatherIcons[timeOfDayIndex]) {
+                        weatherIcons[timeOfDayIndex].setAttribute("src", `./svg/${symbol}.svg`);
+                        weatherIcons[timeOfDayIndex].setAttribute("alt", `Weather Icon for ${symbol}`);
+                        weatherIcons[timeOfDayIndex].setAttribute("width", `34`);
+                    }
                 }
-                const weatherIcons = row.querySelectorAll(".weather-icon img");
-                weatherIcons[timeOfDayIndex].setAttribute("src", `./svg/${symbol}.svg`);
-                weatherIcons[timeOfDayIndex].setAttribute("alt", `Weather Icon for ${symbol}`);
-                weatherIcons[timeOfDayIndex].setAttribute("width", `34`);
             }
         });
     }

@@ -39,7 +39,8 @@
                     </div>
                 </div>
                 <div id="col-2">
-                    <img id="weather-icon-img" src="upload/svg/cloude-and-sunny-icon.svg" alt="Skyet og lidt sol ikon." width="96" />
+                    <img id="weather-icon-img" src="upload/svg/cloude-and-sunny-icon.svg" alt="Skyet og lidt sol ikon."
+                        width="96" />
                 </div>
                 <div id="col-3">
                     <div class="local-parametor-container">
@@ -54,103 +55,145 @@
         <section id="clothing-recommendations-section">
             <div id="row-5">
                 <h3 class="we-recommend-title">Vi andbefaler</h3>
+                <div id="recommend-clothing-container">
+                    <div id="clothing-wrapper">
+                        <div id="clothing-box">
+                            <img src="upload/svg/women-s-jeans (8).svg" alt="Bukser, tegnet som et ikon." />
+                            <p id="clothing-name">Bukser</p>
+                        </div>
+                        <div id="clothing-box">
+                            <img src="upload/svg/shirt (1).svg" alt="Bukser, tegnet som et ikon." />
+                            <p id="clothing-name">T-shirt</p>
+                        </div>
+                        <div id="clothing-box">
+                            <img src="upload/svg/a-raincoat- (3).svg" alt="Bukser, tegnet som et ikon." />
+                            <p id="clothing-name">Regnjakke</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-        <section class="time-container">
-            <div id="date">I dag 31. oktober</div>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Tid</th>
-                        <th>Vejr</th>
-                        <th>Temp.</th>
-                        <th>Nedbør mm</th>
-                        <th>Vind m/s</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="line-light">
-                        <td class="time-box">10:00</td>
-                        <td class="weather-box">
-                            <img class="time-icon-img" src="./svg/clearsky_day.svg" alt="Weather Icon" width="14"
-                                height="9">
-                        </td>
-                        <td class="temperature-box">9°</td>
-                        <td class="number">3</td>
-                        <td class="dot">1</td>
-                    </tr>
-                    <tr class="line-dark">
-                        <td class="time-box">11:00</td>
-                        <td class="weather-box">
-                            <img class="time-icon-img" src="./svg/clearsky_day.svg" alt="Weather Icon" width="14"
-                                height="9">
-                        </td>
-                        <td class="temperature-box">10°</td>
-                        <td class="number">4</td>
-                        <td class="dot">2</td>
-                    </tr>
-                    <tr class="line-light">
-                        <td class="time-box">12:00</td>
-                        <td class="weather-box">
-                            <img class="time-icon-img" src="./svg/clearsky_day.svg" alt="Weather Icon" width="14"
-                                height="9">
-                        </td>
-                        <td class="temperature-box">11°</td>
-                        <td class="number">5</td>
-                        <td class="dot">3</td>
-                    </tr>
-                    <tr class="line-dark">
-                        <td class="time-box">13:00</td>
-                        <td class="weather-box">
-                            <img class="time-icon-img" src="./svg/clearsky_day.svg" alt="Weather Icon" width="14"
-                                height="9">
-                        </td>
-                        <td class="temperature-box">11°</td>
-                        <td class="number">4</td>
-                        <td class="dot">4</td>
-                    </tr>
-                    <tr class="line-light">
-                        <td class="time-box">10:00</td>
-                        <td class="weather-box">
-                            <img class="time-icon-img" src="./svg/clearsky_day.svg" alt="Weather Icon" width="14"
-                                height="9">
-                        </td>
-                        <td class="temperature-box">9°</td>
-                        <td class="number">3</td>
-                        <td class="dot">5</td>
-                    </tr>
-                    <tr class="line-dark">
-                        <td class="time-box">11:00</td>
-                        <td class="weather-box">
-                            <img class="time-icon-img" src="./svg/clearsky_day.svg" alt="Weather Icon" width="14"
-                                height="9">
-                        </td>
-                        <td class="temperature-box">10°</td>
-                        <td class="number">4</td>
-                        <td class="dot">6</td>
-                    </tr>
-                    <tr class="line-light">
-                        <td class="time-box">10:00</td>
-                        <td class="weather-box">
-                            <img class="time-icon-img" src="./svg/clearsky_day.svg" alt="Weather Icon" width="14"
-                                height="9">
-                        </td>
-                        <td class="temperature-box">9°</td>
-                        <td class="number">3</td>
-                        <td class="dot">7</td>
-                    </tr>
-                    <tr class="line-dark">
-                        <td class="time-box">11:00</td>
-                        <td class="weather-box">
-                            <img class="time-icon-img" src="./svg/clearsky_day.svg" alt="Weather Icon" width="14"
-                                height="9">
-                        </td>
-                        <td class="temperature-box">10°</td>
-                        <td class="number">4</td>
-                        <td class="dot">2</td>
-                    </tr>
-                </tbody>
-            </table>
+        <section id="overview-todays-weather-section">
+            <div id="row-6">
+                <h2 id="date">I dag 69. oktober</h2>
+            </div>
+            <div class="table-container-todays-weather">
+                <table class="weather-table">
+                    <thead>
+                        <tr>
+                            <th class="time-title">Tid</th>
+                            <th class="weather-title">Vejr</th>
+                            <th class="temp-title">Temp.</th>
+                            <th class="amount-of-rainfall-title">Nedbør mm</th>
+                            <th class="wind-m-s-title">Vind m/s</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="todays-hours-info">
+                                <p class="hours">08:00</p>
+                            </td>
+                            <td class="weather-info-hours">
+                                <img src="upload/svg/clouded-small-icon.svg" alt="" />
+                            </td>
+                            <td class="weather-info-hours">
+                                <p class="temp">9°</p>
+                            </td>
+                            <td class="weather-info-hours"></td>
+                            <td class="weather-info-hours weather-info-hourly-wind-speed">
+                                <p class="hourly-wind-speed">3</p>
+                                <img src="upload/svg/wind-direction-icon.svg" alt="Vind retning ikon" />
+                            </td>
+                        </tr>
+                        <!-- Gentag denne række for hver dag -->
+                        <tr>
+                            <td class="todays-hours-info">
+                                <p class="hours">08:00</p>
+                            </td>
+                            <td class="weather-info-hours">
+                                <img src="upload/svg/clouded-small-icon.svg" alt="" />
+                            </td>
+                            <td class="weather-info-hours">
+                                <p class="temp">9°</p>
+                            </td>
+                            <td class="weather-info-hours"></td>
+                            <td class="weather-info-hours weather-info-hourly-wind-speed">
+                                <p class="hourly-wind-speed">3</p>
+                                <img src="upload/svg/wind-direction-icon.svg" alt="Vind retning ikon" />
+                            </td>
+                        </tr>
+                        <!-- Gentag denne række for hver dag -->
+                        <tr>
+                            <td class="todays-hours-info">
+                                <p class="hours">08:00</p>
+                            </td>
+                            <td class="weather-info-hours">
+                                <img src="upload/svg/clouded-small-icon.svg" alt="" />
+                            </td>
+                            <td class="weather-info-hours">
+                                <p class="temp">9°</p>
+                            </td>
+                            <td class="weather-info-hours"></td>
+                            <td class="weather-info-hours weather-info-hourly-wind-speed">
+                                <p class="hourly-wind-speed">3</p>
+                                <img src="upload/svg/wind-direction-icon.svg" alt="Vind retning ikon" />
+                            </td>
+                        </tr>
+                        <!-- Gentag denne række for hver dag -->
+                        <tr>
+                            <td class="todays-hours-info">
+                                <p class="hours">08:00</p>
+                            </td>
+                            <td class="weather-info-hours">
+                                <img src="upload/svg/clouded-small-icon.svg" alt="" />
+                            </td>
+                            <td class="weather-info-hours">
+                                <p class="temp">9°</p>
+                            </td>
+                            <td class="weather-info-hours"></td>
+                            <td class="weather-info-hours weather-info-hourly-wind-speed">
+                                <p class="hourly-wind-speed">3</p>
+                                <img src="upload/svg/wind-direction-icon.svg" alt="Vind retning ikon" />
+                            </td>
+                        </tr>
+                        <!-- Gentag denne række for hver dag -->
+                        <tr>
+                            <td class="todays-hours-info">
+                                <p class="hours">08:00</p>
+                            </td>
+                            <td class="weather-info-hours">
+                                <img src="upload/svg/clouded-small-icon.svg" alt="" />
+                            </td>
+                            <td class="weather-info-hours">
+                                <p class="temp">9°</p>
+                            </td>
+                            <td class="weather-info-hours"></td>
+                            <td class="weather-info-hours weather-info-hourly-wind-speed">
+                                <p class="hourly-wind-speed">3</p>
+                                <img src="upload/svg/wind-direction-icon.svg" alt="Vind retning ikon" />
+                            </td>
+                        </tr>
+                        <!-- Gentag denne række for hver dag -->
+                        <tr>
+                            <td class="todays-hours-info">
+                                <p class="hours">08:00</p>
+                            </td>
+                            <td class="weather-info-hours">
+                                <img src="upload/svg/clouded-small-icon.svg" alt="" />
+                            </td>
+                            <td class="weather-info-hours">
+                                <p class="temp">9°</p>
+                            </td>
+                            <td class="weather-info-hours"></td>
+                            <td class="weather-info-hours weather-info-hourly-wind-speed">
+                                <p class="hourly-wind-speed">3</p>
+                                <img src="upload/svg/wind-direction-icon.svg" alt="Vind retning ikon" />
+                            </td>
+                        </tr>
+                        <!-- Gentag denne række for hver dag -->
+                    </tbody>
+                </table>
+            </div>
         </section>
         <section id="advertisement-section">
             <h3>Annoce</h3>
