@@ -15,9 +15,14 @@ h3 {
 	margin: 0;
 }
 
+p {
+	font-weight: 500;
+}
+
 h1,
 h2 {
-	font-weight: 400;
+	font-weight: 500;
+	font-size: 16px;
 }
 
 header {
@@ -49,7 +54,7 @@ nav {
 }
 
 main {
-	padding: 30px 0 60px 0;
+	padding: 30px 0 0px 0;
 }
 
 #overview-weather {
@@ -150,7 +155,6 @@ main {
 
 #clothing-recommendations-section {
 	background-color: #fff;
-	height: 100px;
 	margin: 0 0 8px 0;
 	padding: 5px 16px 21px;
 }
@@ -159,6 +163,31 @@ main {
 	text-align: center;
 	font-size: 10px;
 	font-weight: 500;
+}
+
+#clothing-wrapper {
+	display: flex;
+	justify-content: center;
+	margin: 14px 0 0 0;
+}
+
+#clothing-box {
+	margin: 0 5px;
+}
+
+#clothing-name {
+	font-size: 8px;
+	text-align: center;
+}
+
+#overview-todays-weather-section {
+	background-color: #ffffff;
+	margin: 8px 8px 0 8px;
+	padding: 28px 8px 1px 8px;
+}
+#row-6 {
+	margin-bottom: 14px;
+	text-align: center;
 }
 
 #advertisement-section {
@@ -173,8 +202,87 @@ main {
 	font-weight: 400;
 	color: #787878;
 }
+/*****************************************************/
+.time-title,
+.weather-title,
+.temp-title,
+.amount-of-rainfall-title,
+.wind-m-s-title {
+	font-size: 10px;
+	font-weight: 500;
+}
 
-#overview-next-following-days {
+.time-title {
+	text-align: left;
+	padding: 8px 8px 5px 16px;
+}
+
+.weather-title {
+	width: 24%;
+}
+
+.amount-of-rainfall-title {
+	width: 54%;
+}
+
+.wind-m-s-title {
+	text-align: right;
+	padding-right: 10px;
+	width: 20%;
+}
+
+.time-title,
+.todays-hours-info {
+	padding: 8px 8px 8px 16px;
+}
+
+.hours {
+	width: 0;
+	font-size: 10px;
+}
+
+.todays-hours .hours {
+	font-size: 12px;
+	font-weight: 600;
+	color: #484848;
+}
+
+.temp-title,
+.weather-info-hours .temp {
+	text-align: end;
+}
+
+.weather-info-hours {
+	text-align: center;
+	font-size: 10px;
+}
+
+.weather-info-hourly-wind-speed {
+	display: flex;
+	justify-content: end;
+	padding: 8px 10px 8px 0;
+	text-align: end;
+}
+
+.hourly-wind-speed {
+	padding: 0 5px;
+}
+
+.table-container-todays-weather .weather-table tbody tr:nth-child(1) td {
+	border-top: 2px solid #787878;
+}
+
+.table-container-todays-weather .weather-table tbody:last-child {
+	border-bottom: 2px solid #787878;
+}
+
+td.weather-info-hours.weather-info-hourly-wind-speed {
+	border: none !important;
+}
+
+/********************************************************/
+#overview-next-following-days,
+#overview-todays-weather-section {
 	background-color: #ffffff;
 	margin: 8px 8px 0 8px;
 	padding: 28px 8px 1px 8px;
